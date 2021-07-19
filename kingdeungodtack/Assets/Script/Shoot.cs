@@ -18,9 +18,9 @@ public class Shoot : MonoBehaviour
         nowtime += Time.deltaTime;
         if (Input.GetMouseButton(0) && nowtime>cool)
         {
-            Instantiate(Bullet, transform.position, Camera.main.transform.localRotation);
+            Instantiate(Bullet,GameObject.Find("Gun").transform.position,GameObject.Find("Gun").transform.localRotation);
 
-            cool = nowtime+0.2f;
+            cool = nowtime+0.1f;
             
         }
 

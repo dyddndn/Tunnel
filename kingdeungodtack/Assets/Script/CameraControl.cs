@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class CameraControl : MonoBehaviour
 {
-    public GameObject parent;
+    //public GameObject parent;
     public float rx;
     public float ry;
     public float rotSpeed = 200;
     public Vector3 forshare;
     void Start()
     {
-        parent = transform.parent.gameObject;
+        //parent = transform.parent.gameObject;
 
     }
 
@@ -30,8 +30,9 @@ public class CameraControl : MonoBehaviour
         //x을 돌리는 이유 x축이 이동이 아니라 x축을 회전 해서 위아래 보는 방향은 x축이여야 한다.
 
         //2. 회전을 한다.
-        parent.transform.localEulerAngles = new Vector3(-rx, ry, 0);
-        //transform.eulerAngles = new Vector3(-rx, ry, 0);
+        
+        //parent.transform.eulerAngles = new Vector3(-rx, ry, 0);
+        transform.eulerAngles = new Vector3(-rx, ry, 0);
         //X축의 회전은 양수가 증가되면 아래, 음수가 증가되면 위로 돌아간다. (그래서 x축을 -를 넣었다)
 
     }

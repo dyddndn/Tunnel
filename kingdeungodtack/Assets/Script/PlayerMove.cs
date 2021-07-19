@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-    public float speed = 150;
+    public float speed = 350;
     CharacterController charCtrl;
     void Start()
     {
@@ -28,6 +28,7 @@ public class PlayerMove : MonoBehaviour
         //로컬스페이스에서 월드스페이스로 변환 해준다. (트렌스폼 기준으로 결과를 바꾼다.)
         dir = new Vector3(dir.x, 0, dir.z);
 
+        dir.Normalize();
         // 3. 그 방향으로 이동한다.
         // P = P0 + vt
         //transform.position += dir * speed * Time.deltaTime;

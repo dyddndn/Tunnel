@@ -14,7 +14,7 @@ public class bulletmove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(forr*20 * Time.deltaTime);
+        transform.Translate(forr*700 * Time.deltaTime);
     }
 
 }
