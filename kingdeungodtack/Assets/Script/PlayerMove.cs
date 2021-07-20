@@ -4,17 +4,18 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-    public float speed = 350;
+    public float speed = 150;
     CharacterController charCtrl;
     void Start()
     {
         charCtrl = GetComponent<CharacterController>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        transform.rotation = Camera.main.transform.rotation;
-      
+        transform.eulerAngles = new Vector3(0, Camera.main.GetComponent<CameraControl>().ry, 0);
+        //transform.rotation = Camera.main.transform.rotation;
+
 
         // 1. 사용자의 입력에 따라
         float h = Input.GetAxis("Horizontal");
@@ -27,7 +28,7 @@ public class PlayerMove : MonoBehaviour
         dir = Camera.main.transform.TransformDirection(dir);
         //로컬스페이스에서 월드스페이스로 변환 해준다. (트렌스폼 기준으로 결과를 바꾼다.)
         dir = new Vector3(dir.x, 0, dir.z);
-
+        if(dir.magnitude>1.0f || dir.magnitude<-1.0f)
         dir.Normalize();
         // 3. 그 방향으로 이동한다.
         // P = P0 + vt

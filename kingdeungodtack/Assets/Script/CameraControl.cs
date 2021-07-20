@@ -7,7 +7,7 @@ public class CameraControl : MonoBehaviour
     //public GameObject parent;
     public float rx;
     public float ry;
-    public float rotSpeed = 100;
+    public float rotSpeed = 70;
     public Vector3 forshare;
     void Start()
     {

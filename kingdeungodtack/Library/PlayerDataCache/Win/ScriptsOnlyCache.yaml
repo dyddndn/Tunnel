@@ -25,7 +25,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Image
     - UnityEngine.UI.Text
   sceneClasses:
-    Assets/Scenes/SampleScene.unity:
+    Assets/Scenes/MainGame.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -55,25 +55,25 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11272}
+      Script: {instanceID: 11304}
     - Class: 114
-      Script: {instanceID: 11430}
+      Script: {instanceID: 11462}
     - Class: 114
-      Script: {instanceID: 11470}
+      Script: {instanceID: 11502}
     - Class: 114
-      Script: {instanceID: 11594}
+      Script: {instanceID: 11624}
     - Class: 114
-      Script: {instanceID: 12214}
+      Script: {instanceID: 12238}
     - Class: 114
-      Script: {instanceID: 12394}
+      Script: {instanceID: 12410}
     - Class: 114
-      Script: {instanceID: 12434}
+      Script: {instanceID: 12450}
     - Class: 114
-      Script: {instanceID: 12744}
+      Script: {instanceID: 12758}
     - Class: 114
-      Script: {instanceID: 12906}
+      Script: {instanceID: 12914}
     - Class: 114
-      Script: {instanceID: 13014}
+      Script: {instanceID: 13020}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -85,6 +85,8 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 205
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -553,5 +555,5 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   platform: 5
   scenePathNames:
-  - Assets/Scenes/SampleScene.unity
+  - Assets/Scenes/MainGame.unity
   playerPath: C:/Users/dyddn/Desktop/temp/kingdeungodtack.exe
