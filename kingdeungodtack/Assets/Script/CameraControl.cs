@@ -7,10 +7,11 @@ public class CameraControl : MonoBehaviour
     //public GameObject parent;
     public float rx;
     public float ry;
-    public float rotSpeed = 200;
+    public float rotSpeed = 100;
     public Vector3 forshare;
     void Start()
     {
+        Screen.SetResolution(1600, 900, false);
         //parent = transform.parent.gameObject;
 
     }
