@@ -6,7 +6,6 @@ public class StepSound : MonoBehaviour
 {
     public AudioClip stepsound;
     float soundtime = 0.0f;
-    bool cansound = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +21,6 @@ public class StepSound : MonoBehaviour
         if (dir.sqrMagnitude > 0.1f && soundtime > 0.5f)
         {
             GetComponent<AudioSource>().Play();
-            cansound = false;
             soundtime = 0.0f;
         }
     }

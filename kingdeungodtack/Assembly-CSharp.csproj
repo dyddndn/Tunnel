@@ -64,6 +64,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Metal_Crates_Textures\Scripts\CameraFreeflight.cs" />
     <Compile Include="Assets\Script\CameraControl.cs" />
     <Compile Include="Assets\Script\CameraPosition.cs" />
     <Compile Include="Assets\Script\PlayerMove.cs" />
