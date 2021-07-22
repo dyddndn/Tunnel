@@ -9,10 +9,10 @@ public class CameraControl : MonoBehaviour
     public float ry;
     public float rotSpeed = 70;
     public Vector3 forshare;
+
     void Start()
     {
         Screen.SetResolution(1600, 900, false);
-        //parent = transform.parent.gameObject;
 
     }
 
@@ -32,7 +32,7 @@ public class CameraControl : MonoBehaviour
 
         //2. 회전을 한다.
         
-        //parent.transform.eulerAngles = new Vector3(-rx, ry, 0);
+        //transform.parent.gameObject.transform.eulerAngles = new Vector3(-rx, ry, 0);
         transform.eulerAngles = new Vector3(-rx, ry, 0);
         //X축의 회전은 양수가 증가되면 아래, 음수가 증가되면 위로 돌아간다. (그래서 x축을 -를 넣었다)
 
