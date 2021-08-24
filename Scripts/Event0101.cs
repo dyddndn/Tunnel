@@ -25,10 +25,9 @@ public class Event0101 : MonoBehaviour
     {
         if (other.tag == "Player" && canplay) //닿은 물체의 태그가 Player고 canplay가 true 상태면
         {
-            zombie.SetActive(false);
             PlayerSpeechScreen.Instance.stopspeech();
-            PlayerSpeechScreen.Instance.startspeech("방금 누군가가 보였는데...", "", "", "", "");
-            DiaryBody.GetComponent<Text>().text = "철창 뒤로 누군가의 모습이 보였다. 열쇠를 찾아 문을 열고 나가보자.";
+            PlayerSpeechScreen.Instance.startspeech("젠장, 문 앞에서 기다리고 있잖아?", "문을 열지 않고 갈수 있는 방법이 있을까..?", "", "", "");
+            DiaryBody.GetComponent<Text>().text = "철창 뒤에서 나를 노리는 녀석의 모습이 보인다.\n안전하게 지나갈 방법을 찾아야 한다.";
             canplay = false; //한번 대사했으면 다시 X
 
         }

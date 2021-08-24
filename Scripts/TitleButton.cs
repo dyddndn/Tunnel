@@ -31,7 +31,10 @@ public class TitleButton : MonoBehaviour
             case 2:
                 SceneManager.LoadScene("Chapter2");
                 break;
-        
+            case 3:
+                SceneManager.LoadScene("Chapter3");
+                break;
+
         }
     }
 

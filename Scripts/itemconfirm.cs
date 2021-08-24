@@ -20,6 +20,7 @@ public class itemconfirm : MonoBehaviour
     GameObject temppicturebook;
     GameObject temptextbook;
 
+    bool moveon = false;
 
     public GameObject requirekey;
     bool requirekeyon = false;
@@ -94,7 +95,14 @@ public class itemconfirm : MonoBehaviour
                 itemEkey.GetComponent<Text>().text = "E 획득";
                 itemEkey.SetActive(true);
             }
-            else
+            else if (hit.collider.name == "MovingBrick")//1챕터 움직이는 벽
+            {
+                itemEkey.GetComponent<Text>().text = "E 밀기";
+                itemEkey.SetActive(true);
+            }
+
+
+        else
             {
                 itemEkey.GetComponent<Text>().text = "";
                 itemEkey.SetActive(false);
@@ -115,6 +123,10 @@ public class itemconfirm : MonoBehaviour
                 TextBookText.GetComponent<Text>().text = hit.collider.GetComponent<Text>().text; // 해당 오브젝트의 text 컴포넌트에 적힌 내용을 가져옴
                 TextBookUI.SetActive(true); // 활성화
                 temptextbook = hit.collider.gameObject;
+            }
+            if (hit.collider.name == "MovingBrick" && Input.GetKeyDown(KeyCode.E)) //1챕터 움직이는 벽
+            {
+                moveon = true;
             }
 
 
@@ -162,6 +174,16 @@ public class itemconfirm : MonoBehaviour
         {
             requirekeyon = false;
         }
+
+        if(moveon)//1챕터 움직이는 벽
+            movemove();
+    }
+    void movemove()//1챕터 움직이는 벽
+    {
+        if (GameObject.Find("MovingBrick").transform.position.x > -11)
+            GameObject.Find("MovingBrick").transform.position -= new Vector3(Time.deltaTime, 0, 0);
+        else
+            moveon = false;
     }
 
 }
